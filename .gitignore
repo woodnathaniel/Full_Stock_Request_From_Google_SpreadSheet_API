@@ -1,0 +1,6 @@
+service-account.json
+node_modules
+.env
+server/.env
+.DS_Store
+inventoryelectron-b4281a22a1ce.json
