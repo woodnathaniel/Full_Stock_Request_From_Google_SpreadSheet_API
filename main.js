@@ -75,24 +75,27 @@ async function readSheet() {
 // ---------------------------------------------
 app.get('/inventory', async (req, res) => {
   try {
-    const q = (req.query.q || '').toString().trim().toLowerCase();
-    const items = await readSheet();
+    // const q = (req.query.q || '').toString().trim().toLowerCase();
+    // const items = await readSheet();
 
-    if (!q) {
-      return res.json({ success: true, items });
-    }
+    // if (!q) {
+    //   return res.json({ success: true, items });
+    // }
 
-    // server-side search
-    const filtered = items.filter(item => {
-      const combined = Object.values(item).join(" ").toLowerCase();
-      return combined.includes(q);
-    });
+    // // server-side search
+    // const filtered = items.filter(item => {
+    //   const combined = Object.values(item).join(" ").toLowerCase();
+    //   return combined.includes(q);
+    // });
 
-    return res.json({ success: true, items: filtered });
+    // return res.json({ success: true, items: filtered });
+    const testText = "Hello vercel api"
+    return testText
 
   } catch (err) {
-    console.error('sheet read error', err.message);
-    return res.status(500).json({ success: false, error: err.message });
+    // console.error('sheet read error', err.message);
+    // return res.status(500).json({ success: false, error: err.message });
+    return err
   }
 });
 
