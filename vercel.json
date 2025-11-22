@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/inventory.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/inventory", "dest": "/api/inventory.js" }
+  ]
+}
