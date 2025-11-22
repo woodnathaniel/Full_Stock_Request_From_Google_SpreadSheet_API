@@ -92,8 +92,7 @@ app.get('/inventory', async (req, res) => {
 
     const testText = "Hello vercel api"
     console.log(testText);
-    
-    return testText
+    return res.json({ success: true, message: testText });
 
   } catch (err) {
     // console.error('sheet read error', err.message);
