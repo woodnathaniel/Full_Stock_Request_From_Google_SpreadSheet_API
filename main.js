@@ -89,7 +89,10 @@ app.get('/inventory', async (req, res) => {
     // });
 
     // return res.json({ success: true, items: filtered });
+
     const testText = "Hello vercel api"
+    console.log(testText);
+    
     return testText
 
   } catch (err) {
